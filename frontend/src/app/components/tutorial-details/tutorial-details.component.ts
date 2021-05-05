@@ -51,8 +51,8 @@ export class TutorialDetailsComponent implements OnInit {
     this.tutorialService.update(this.currentTutorial.id, data).subscribe(
       (response) => {
         this.currentTutorial.published = status;
-        console.log(response);
         this.message = response.message;
+        this.router.navigate(['/tutorials']);
       },
       (error) => {
         console.log(error);
@@ -66,6 +66,7 @@ export class TutorialDetailsComponent implements OnInit {
       .subscribe(
         (response) => {
           this.message = response.message;
+          this.router.navigate(['/tutorials']);
         },
         (error) => {
           console.log(error);
@@ -77,9 +78,8 @@ export class TutorialDetailsComponent implements OnInit {
     console.log(this.currentTutorial.deleted)
     this.tutorialService.delete(this.currentTutorial.id).subscribe(
       () => {
-        // this.router.navigate(['/tutorial']);
         this.currentTutorial.deleted = status;
-        console.log(this.currentTutorial.deleted)
+        this.router.navigate(['/tutorials']);
       },
       (error) => {
         console.log(error);
