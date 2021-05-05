@@ -14,6 +14,7 @@ export class AddTutorialComponent implements OnInit {
     title: null,
     description: null,
     published: null,
+    deleted: null,
   };
 
   submitted: boolean = false;
@@ -42,8 +43,7 @@ export class AddTutorialComponent implements OnInit {
       title: null,
       description: null,
       published: false,
+      deleted: null,
     };
   }
-
-
 }

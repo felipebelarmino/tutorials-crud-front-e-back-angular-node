@@ -15,6 +15,7 @@ export class TutorialDetailsComponent implements OnInit {
     title: null,
     description: null,
     published: false,
+    deleted: false,
   };
 
   constructor(
@@ -64,7 +65,6 @@ export class TutorialDetailsComponent implements OnInit {
       .update(this.currentTutorial.id, this.currentTutorial)
       .subscribe(
         (response) => {
-          console.log(response);
           this.message = response.message;
         },
         (error) => {
@@ -73,11 +73,13 @@ export class TutorialDetailsComponent implements OnInit {
       );
   }
 
-  deleteTutorial(): void {
+  deleteTutorial(status: boolean): void {
+    console.log(this.currentTutorial.deleted)
     this.tutorialService.delete(this.currentTutorial.id).subscribe(
-      (response) => {
-        console.log(response);
-        this.router.navigate(['/tutorial']);
+      () => {
+        // this.router.navigate(['/tutorial']);
+        this.currentTutorial.deleted = status;
+        console.log(this.currentTutorial.deleted)
       },
       (error) => {
         console.log(error);
