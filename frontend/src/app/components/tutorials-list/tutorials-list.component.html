@@ -1,4 +1,4 @@
-<div class="list row">
+<div class="list row box-content">
   <div class="col-md-8">
     <div class="input-group mb-3">
       <input
@@ -21,7 +21,7 @@
 
   <div class="col-md-6">
     <h4>Lista de tutoriais</h4>
-    <ul>
+    <ul class="list-group">
       <li
         class="list-group-item"
         *ngFor="let tutorial of tutorials; let i = index"
@@ -32,13 +32,15 @@
       </li>
     </ul>
 
-    <button class="m-3 btn btn-sm btn-danger" (click)="removeAllTutorials()">
-      Excluir todos os tutoriais
-    </button>
+    <section class="list-group-item" id="center">
+      <button class="m-3 btn btn-sm btn-danger" (click)="removeAllTutorials()">
+        Excluir todos os tutoriais
+      </button>
+    </section>
   </div>
 
   <div class="col-md-6">
-    <div *ngIf="currentTutorial">
+    <div *ngIf="currentTutorial" class="tutorial-description">
       <h4>Tutorial</h4>
       <div>
         <label><strong>Title:</strong></label>

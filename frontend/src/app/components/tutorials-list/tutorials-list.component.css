@@ -1,5 +1,20 @@
 .list {
   text-align: left;
-  max-width: 750px;
+  max-width: 950px;
+  margin: auto;
+}
+
+.tutorial-description {
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid rgb(230, 230, 230);
+}
+
+.box-content {
+  box-shadow: 0 3px 5px 2px rgb(231, 231, 231);
+  padding: 15px;
+}
+
+#center {
   margin: auto;
 }

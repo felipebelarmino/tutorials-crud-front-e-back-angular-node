@@ -2,3 +2,8 @@
   max-width: 400px;
   margin: auto;
 }
+
+.box-content {
+  box-shadow: 0 3px 5px 2px rgb(231, 231, 231);
+  padding: 15px;
+}

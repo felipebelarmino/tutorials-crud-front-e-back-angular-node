@@ -1,4 +1,11 @@
 .submit-form {
-  max-width: 600px;
+  max-width: 55vw;
   margin: auto;
+}
+
+.box-content {
+  max-width: 60vw;
+  margin: auto;
+  box-shadow: 0 3px 5px 2px rgb(231, 231, 231);
+  padding: 30px 10px;
 }
